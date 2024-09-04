@@ -1,5 +1,5 @@
 .Favorite-body {
-  background-image: url('../../access/img/FavoriteBackGround.jpg');
+  background-image: url("../../assets/FavoriteBackGround.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -24,7 +24,8 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   color: #000000;
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .Favorite-selectors select option {
@@ -44,7 +45,6 @@
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-
 
 .Favorite-container {
   display: grid;
