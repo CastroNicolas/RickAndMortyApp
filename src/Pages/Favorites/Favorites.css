@@ -1,0 +1,55 @@
+.Favorite-body {
+  background-image: url('../../access/img/FavoriteBackGround.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.Favorite-selectors {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.Favorite-selectors select {
+  margin: 0 10px;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #000000;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.Favorite-selectors select option {
+  background-color: transparent; /* Cambiado a transparente */
+  color: #000000;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Favorite-selectors select option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Favorite-selectors select:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+
+.Favorite-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin-bottom: 25px;
+}
