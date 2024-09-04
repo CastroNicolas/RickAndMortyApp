@@ -3,7 +3,7 @@ import './form.css'
 import { validate } from "./components/Validate/validate";
 
 // eslint-disable-next-line react/prop-types
-export const Form = ({login}) => {
+export const Form = ({ login }) => {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -19,44 +19,45 @@ export const Form = ({login}) => {
     const value = e.target.value;
 
     setData({ ...data, [property]: value });
-    validate({ ...data, [property]: value },setError, error);
+    validate({ ...data, [property]: value }, setError, error);
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     login(data)
   }
   return (
     <div className="Login-body">
-    <form onSubmit={handleSubmit} className="rick-and-morty-form">
-      <div>
-        Email:
-        <input
-          type="email"
-          placeholder="Email..."
-          name="email"
-          value={data.email}
-          onChange={handleChange}
+      <form onSubmit={handleSubmit} className="rick-and-morty-form">
+        <div>
+          Email:
+          <input
+            type="email"
+            placeholder="Email..."
+            name="email"
+            value={data.email}
+            onChange={handleChange}
           />
-        <span>{error.email}</span>
-      </div>
-      
-      <div>
-        Password:
-        <input
-          type="password"
-          placeholder="Password..."
-          name="password"
-          value={data.password}
-          onChange={handleChange}
+          <p>Email: demo@mgail.com</p>
+          <span>{error.email}</span>
+        </div>
+
+        <div>
+          Password:
+          <input
+            type="password"
+            placeholder="Password..."
+            name="password"
+            value={data.password}
+            onChange={handleChange}
           />
-          <br/>
-        <span>{error.password}</span>
-      </div>
-      <div>
-        <button type="submit">Login</button>
-      </div>
-    </form>
-  </div>
+          <p>Password: 123456</p>
+          <span>{error.password}</span>
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
   );
 };
