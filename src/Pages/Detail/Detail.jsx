@@ -10,7 +10,7 @@ export const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`https://rick-and-morty-backend-theta.vercel.app/rickandmorty/character/${id}`)
+      .get(`/rickandmorty/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);
