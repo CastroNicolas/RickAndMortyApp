@@ -1,5 +1,5 @@
 import axios from "axios";
-const deploy = "https://rickandmortyapi.com/";
+const deploy = "https://rick-and-morty-backend-theta.vercel.app";
 export const addFav = (character) => {
   return async (dispatch) => {
     try {
