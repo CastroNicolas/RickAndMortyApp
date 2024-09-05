@@ -1,11 +1,12 @@
 import axios from "axios";
+const deploy = "https://rick-and-morty-backend-theta.vercel.app";
 export const addFav = (character) => {
   return async (dispatch) => {
     try {
-      const endpoint = "http://localhost:3001/rickandmorty/fav";
+      const endpoint = `${deploy}/rickandmorty/fav`;
       const { data } = await axios.post(endpoint, character);
       return dispatch({
-        type: 'ADD_FAV',
+        type: "ADD_FAV",
         payload: data,
       });
     } catch (error) {
@@ -23,10 +24,10 @@ export const addFav = (character) => {
 export const removeFav = (id) => {
   return async (dispatch) => {
     try {
-      const endpoint =`http://localhost:3001/rickandmorty/fav/${id}`;
+      const endpoint = `${deploy}/rickandmorty/fav/${id}`;
       const { data } = await axios.delete(endpoint);
       return dispatch({
-        type: 'REMOVE_FAV',
+        type: "REMOVE_FAV",
         payload: data,
       });
     } catch (error) {
@@ -42,7 +43,7 @@ export const removeFav = (id) => {
   //     });
   //   });
   // };
-}
+};
 
 export const filterCards = (gender) => {
   return {

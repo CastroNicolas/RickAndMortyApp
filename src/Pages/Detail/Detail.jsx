@@ -10,11 +10,11 @@ export const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/rickandmorty/character/${id}`)
+      .get(`https://rick-and-morty-backend-theta.vercel.app/rickandmorty/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);
-        } 
+        }
       });
     return setCharacter({});
   }, [id]);

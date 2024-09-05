@@ -20,7 +20,7 @@ function App() {
       return alert(`Ya está puesto el personaje con el el id ${id}`);
     }
     axios
-      .get(`http://localhost:3001/rickandmorty/character/${id}`)
+      .get(`https://rick-and-morty-backend-theta.vercel.app/rickandmorty/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacters((characters) => [data, ...characters]);
