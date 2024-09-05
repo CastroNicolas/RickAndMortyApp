@@ -1,5 +1,5 @@
 import axios from "axios";
-const deploy = "https://rick-and-morty-backend-theta.vercel.app";
+const deploy = "https://rickandmortyapi.com/";
 export const addFav = (character) => {
   return async (dispatch) => {
     try {
@@ -14,12 +14,6 @@ export const addFav = (character) => {
       alert("Error al agregar a favoritos.");
     }
   };
-  // axios.post(ENDPOINT, character).then(({ data }) => {
-  //   return dispatch({
-  //     type: ADD_FAV,
-  //     payload: data,
-  //   });
-  // });
 };
 export const removeFav = (id) => {
   return async (dispatch) => {
@@ -35,14 +29,6 @@ export const removeFav = (id) => {
       alert("Error al quitar de favoritos.");
     }
   };
-  // return (dispatch) => {
-  //   axios.delete(${ENDPOINT}/${id}).then(({ data }) => {
-  //     return dispatch({
-  //       type: "REMOVE_FAV",
-  //       payload: data,
-  //     });
-  //   });
-  // };
 };
 
 export const filterCards = (gender) => {
