@@ -38,7 +38,7 @@ export const Form = ({ login }) => {
             value={data.email}
             onChange={handleChange}
           />
-          <p>Email: demo@mgail.com</p>
+          <p>Email: demo@gmail.com</p>
           <span>{error.email}</span>
         </div>
 
